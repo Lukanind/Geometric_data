@@ -21,17 +21,17 @@ double prizma::set_a(double new_a) { a = new_a; }
 double prizma::set_b(double new_b) { b = new_b; }
 double prizma::set_c(double new_c) { c = new_c; }
 double prizma::set_A(double new_A) { A = new_A; }
-double prizma::set_B(double new_B) { A = new_B; }
-double prizma::set_C(double new_C) { A = new_C; }
-double prizma::set_D(double new_D) { A = new_D; }
-double prizma::set_E(double new_E) { A = new_E; }
-double prizma::set_F(double new_F) { A = new_F; }
-double prizma::set_G(double new_G) { A = new_G; }
-double prizma::set_H(double new_H) { A = new_H; }
+double prizma::set_B(double new_B) { B = new_B; }
+double prizma::set_C(double new_C) { C = new_C; }
+double prizma::set_D(double new_D) { D = new_D; }
+double prizma::set_E(double new_E) { E = new_E; }
+double prizma::set_F(double new_F) { F = new_F; }
+double prizma::set_G(double new_G) { G = new_G; }
+double prizma::set_H(double new_H) { H = new_H; }
 
 
 
-double prizma::Volume(double a, double b, double c)// a-длина,b-ширина,c-высота
+double prizma::Volume(double a, double b, double c)// a-Г¤Г«ДЌГ­Е•,b-Е™ДЌД‘ДЌГ­Е•,c-ГўЕ±Е„Г®Е€Е•
 {
 	return(a * b * c);
 }
