@@ -16,7 +16,7 @@ private:
 	};
 public:
 	parallelepiped();
-	parallelepiped(double _a, double _b, double _c, double _h, double _DAB, double _A1AB, double _A1AD);
+	parallelepiped(double _a, double _b, double _c, double _h, double _DAB, double _A1AB, double _A1AD, double _V, double _S_poln);
 	parallelepiped(const parallelepiped& parallelepiped);
 
 	double get_a() const;
