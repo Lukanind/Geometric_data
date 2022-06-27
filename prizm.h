@@ -41,9 +41,14 @@ public:
 
 	
 
+	double Volume(double a, double b, double c,double A);//triangle
 	
-	double Volume(double a, double b, double c);
+	double Volume(double a, double b, double C, double B);//trapezoid
 	
-	double Surface_area(double a, double b, double c);
+	
+	double Surface_area(double a, double b, double c,double A);//triangle
+	
+	double Surface_area(double a, double b, double c,double A, double C,double B);//trapezoid
+	
 	
 };
