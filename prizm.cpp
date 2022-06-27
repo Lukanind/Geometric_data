@@ -30,14 +30,31 @@ double prizma::set_G(double new_G) { G = new_G; }
 double prizma::set_H(double new_H) { H = new_H; }
 
 
-
-double prizma::Volume(double a, double b, double c)// a-äëčíŕ,b-řčđčíŕ,c-âűńîňŕ
+double prizma::Volume(double a, double b, double c,double A)//triangle
 {
-	return(a * b * c);
+	double p = ((a + b + c) / 2);
+	double S = sqrt(p * (p - a) * (p - b) * (p - c));
+	return(S * A);
+}
+double prizma::Volume(double a, double b, double C, double B)//trapezoid
+{
+	double S = (((a * b) / 2) * C);
+	return (S*B);
 }
 
-double prizma::Surface_area(double a, double b, double c)
+
+double prizma::Surface_area(double a, double b, double c,double A)//triangle
 {
-	return(2 * (a * b + b * c + c * a));
+	double p = ((a + b + c) / 2);
+	double Sb = ((a + b + c) * A);
+	double So= sqrt(p * (p - a) * (p - b) * (p - c));
+	return(2 * So + Sb);
+}
+
+double prizma::Surface_area(double a, double b, double c,double A, double C,double B)//trapezoid
+{
+	double Sb = ((a + b + c+A) * B);
+	double So = (((a * b) / 2) * C);
+	return(2 * So + Sb);
 }
 
