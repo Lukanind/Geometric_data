@@ -5,9 +5,9 @@
 using namespace std;
 
 parallelepiped::parallelepiped() : a(0), b(0), c(0), h(0) {}
-parallelepiped::parallelepiped(double _a, double _b, double _c, double _h, double _DAB, double _A1AB, double _A1AD) : a(_a), b(_b), c(_c), h(_h) , DAB(_DAB), A1AB(_A1AB), A1AD(_A1AD) {}
+parallelepiped::parallelepiped(double _a, double _b, double _c, double _h, double _DAB, double _A1AB, double _A1AD) : a(_a), b(_b), c(_c), h(_h) , DAB(_DAB), A1AB(_A1AB), A1AD(_A1AD), V(_V), S_poln(_S_poln) {}
 parallelepiped::parallelepiped(const parallelepiped& parallelepiped) : a(parallelepiped.a), b(parallelepiped.b), c(parallelepiped.c), h(parallelepiped.h), DAB(parallelepiped.DAB), 
-																	   A1AB(parallelepiped.A1AB), A1AD(parallelepiped.A1AD), V(parallelepiped.V), S_poln(parallelepiped.S_poln) {}
+									A1AB(parallelepiped.A1AB), A1AD(parallelepiped.A1AD), V(parallelepiped.V), S_poln(parallelepiped.S_poln) {}
 
 
 double parallelepiped::get_a()const { return a; };
