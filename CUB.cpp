@@ -19,17 +19,17 @@ double CUB::get_E()const { return E; }
 double CUB::get_F()const { return F; }
 double CUB::get_G()const { return G; }
 
-double CUB::set_a(double new_a) { a = new_a; };
-double CUB::set_V(double new_V) { V = new_V; };
+double CUB::set_a(double new_a) { return a = new_a; };
+double CUB::set_V(double new_V) { return V = new_V; };
 double CUB::set_S_TTOBERXHOCT(double new_S_TTOBERXHOCT) { S_TTOBERXHOCT = new_S_TTOBERXHOCT; };
 
-double CUB::set_A(double new_A) { A = new_A; }
-double CUB::set_B(double new_B) { B = new_B; }
-double CUB::set_C(double new_C) { C = new_C; }
-double CUB::set_D(double new_D) { D = new_D; }
-double CUB::set_E(double new_E) { E = new_E; }
-double CUB::set_F(double new_F) { F = new_F; }
-double CUB::set_G(double new_G) { G = new_G; }
+double CUB::set_A(double new_A) { return A = new_A; }
+double CUB::set_B(double new_B) { return B = new_B; }
+double CUB::set_C(double new_C) { return C = new_C; }
+double CUB::set_D(double new_D) { return D = new_D; }
+double CUB::set_E(double new_E) { return E = new_E; }
+double CUB::set_F(double new_F) { return F = new_F; }
+double CUB::set_G(double new_G) { return G = new_G; }
 
 double CUB::Volume_CUB(double a)
 {
