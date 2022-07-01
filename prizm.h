@@ -1,4 +1,6 @@
 #pragma once
+#ifndef PRIZMA_H
+#define PRIZMA_H
 #include <iostream>
 #include <math.h>
 
@@ -7,12 +9,12 @@ using namespace std;
 class prizma
 {
 private:
-	double a, b, c, A ,B ,C ,D ,E ,F ,G , H;
+	double a, b, c, A, B, C, D, E, F, G, H;
 public:
 	prizma();
 	prizma(const prizma& prizma);
 	prizma(double a, double b, double c, double A, double B, double C, double D, double E, double F, double G, double H);
-	
+
 
 
 	double get_a() const;
@@ -26,7 +28,7 @@ public:
 	double get_F() const;
 	double get_G() const;
 	double get_H() const;
-	
+
 	double set_a(double new_a);
 	double set_b(double new_b);
 	double set_c(double new_c);
@@ -39,16 +41,19 @@ public:
 	double set_G(double  new_G);
 	double set_H(double  new_H);
 
-	
 
-	double Volume(double a, double b, double c,double A);//triangle
-	
+
+
+	double Volume(double a, double b, double c, double A);//triangle
+
 	double Volume(double a, double b, double C, double B);//trapezoid
-	
-	
-	double Surface_area(double a, double b, double c,double A);//triangle
-	
-	double Surface_area(double a, double b, double c,double A, double C,double B);//trapezoid
-	
-	
+
+
+	double Surface_area(double a, double b, double c, double A);//triangle
+
+	double Surface_area(double a, double b, double c, double A, double C, double B);//trapezoid
+
 };
+
+
+#endif 
