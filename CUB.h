@@ -1,15 +1,13 @@
 #pragma once
-#include <iostream>
-#include <math.h>
 
 using namespace std;
 
 class CUB
 {
 private:
-	double A, B, C, D, E, F, G; // Вершины
-	double a; // длинна ребра
-	double V, S_TTOBERXHOCT; //V-объем
+	double A, B, C, D, E, F, G; // Г‚ДєД‘Е™ДЌГ­Е±
+	double a; // Г¤Г«ДЌГ­Г­Е• Д‘ДєГЎД‘Е•
+	double V, S_TTOBERXHOCT; //V-Г®ГЎГєДєД›
 public:
 	CUB();
 	CUB(double a, double V, double S_TTOBERXHOCT);
