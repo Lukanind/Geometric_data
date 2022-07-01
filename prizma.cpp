@@ -1,4 +1,4 @@
-#include "prizm.h"
+#include "prizma.h"
 
 using namespace std;
 
