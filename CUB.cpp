@@ -3,7 +3,7 @@
 using namespace std;
 
 CUB::CUB() : a(0){}
-CUB::CUB(double a, double V, double S_TTOBERXHOCT) : a(a) {}
+CUB::CUB(double a) : a(a) {}
 CUB::CUB(const CUB& CUB) : a(CUB.a) {}
 
 
