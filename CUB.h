@@ -9,7 +9,7 @@ private:
 	double a; // äëčííŕ đĺáđŕ
 public:
 	CUB();
-	CUB(double a, double V, double S_TTOBERXHOCT);
+	CUB(double a);
 	CUB(const CUB& CUB);
 
 	double get_a() const;
