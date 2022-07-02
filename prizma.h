@@ -51,6 +51,11 @@ public:
 
 	double Surface_area(double a, double b, double c, double d, double h, double h2);//trapezoid
 
+        void show_triangle_vertexes();
+	void show_triangle_facets();
+	void show_trapezoid_vertexes();
+	void show_trapezoid_facets();
+
 };
 
 
