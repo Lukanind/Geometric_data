@@ -7,15 +7,12 @@ class CUB
 private:
 	double A, B, C, D, E, F, G; // Âĺđřčíű
 	double a; // äëčííŕ đĺáđŕ
-	double V, S_TTOBERXHOCT; //V-îáúĺě
 public:
 	CUB();
 	CUB(double a, double V, double S_TTOBERXHOCT);
 	CUB(const CUB& CUB);
 
 	double get_a() const;
-	double get_V() const;
-	double get_S_TTOBERXHOCT() const;
 
 	double get_A() const;
 	double get_B() const;
@@ -26,8 +23,6 @@ public:
 	double get_G() const;
 
 	double set_a(double new_a);
-	double set_V(double new_V);
-	double set_S_TTOBERXHOCT(double new_S_TTOBERXHOCT);
 
 	double set_A(double  new_A);
 	double set_B(double  new_B);
