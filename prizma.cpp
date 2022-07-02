@@ -55,3 +55,22 @@ double prizma::Surface_area(double a, double b, double c, double d, double h, do
 	double So = (((a * b) / 2) * h);
 	return(2 * So + Sb);
 }
+void prizma::show_triangle_vertexes()
+{
+	cout << "A, B, C, A1, B1, C1";
+}
+void prizma::show_triangle_facets()
+{
+	cout << "AA1BB1;AA1СС1;BCB1C1;ABC;A1B1C1.";
+
+}
+
+void prizma::show_trapezoid_vertexes()
+{
+	cout << "A,B,C,D,A1,B1,C1,D1";
+}
+
+void prizma::show_trapezoid_facets()
+{
+	cout << "ABCD;A1B1C1D1;AA1BB1;BB1CC1;CC1DD1;DD1AA1.";
+}
