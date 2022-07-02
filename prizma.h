@@ -1,6 +1,4 @@
-#pragma once
-#ifndef PRIZMA_H
-#define PRIZMA_H
+#pragma once 
 #include <iostream>
 #include <math.h>
 
@@ -56,6 +54,3 @@ public:
 };
 
 
-
-
-#endif 
