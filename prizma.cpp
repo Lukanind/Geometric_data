@@ -99,3 +99,22 @@ void prizma::show_trapezoid_facets()
 {
 	cout << "ABCD;A1B1C1D1;AA1BB1;BB1CC1;CC1DD1;DD1AA1.";
 }
+
+void prizma::show_pentagon_vertexes()
+{
+	cout << "A, B, C, D, E, A1, B1, C1,D1,E1";
+}
+
+void prizma::show_pentagon_facets()
+{
+	cout << "ABCDE;A1B1C1D1E1;AA1BB1;BB1CC1;CC1DD1;DD1EE1;EE1AA1.";
+}
+void prizma::show_hexagon_vertexes()
+{
+	cout << "A, B, C, D, E, F, A1, B1, C1, D1, E1, F1";
+}
+
+void prizma::show_hexagon_facets()
+{
+	cout << "ABCDEF;A1B1C1D1E1F1;AA1BB1;BB1CC1;CC1DD1;DD1EE1;EE1FF1,FF1AA1.";
+}
