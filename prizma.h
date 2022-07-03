@@ -55,12 +55,14 @@ public:
 	double Surface_area(double a, double b, double c, double d, double h, double h2);//trapezoid
 	double Surface_area(double a, double h);//pentagon
 	double Surface_area_Hexagon(double a, double h2);//hexagon
-
-	void show_triangle_vertexes();
+        void show_triangle_vertexes();
 	void show_triangle_facets();
 	void show_trapezoid_vertexes();
 	void show_trapezoid_facets();
-
+	void show_pentagon_vertexes();
+	void show_pentagon_facets();
+	void show_hexagon_vertexes();
+	void show_hexagon_facets();
 };
 
 
