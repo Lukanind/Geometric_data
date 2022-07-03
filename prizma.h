@@ -41,17 +41,22 @@ public:
 
 
 
-
-	double Volume_triangle(double a, double b, double c, double h);//triangle
+        double Volume_triangle(double a, double b, double c, double h);//triangle
 
 	double Volume_trapezoid(double a, double b, double h, double h2);//trapezoid
+	
+	double Volume_pentagon(double a, double h);//pentagon
+	
+	double Volume_hexagon(double a, double h);//Hexagon
 
 
 	double Surface_area(double a, double b, double c, double h);//triangle
 
 	double Surface_area(double a, double b, double c, double d, double h, double h2);//trapezoid
+	double Surface_area(double a, double h);//pentagon
+	double Surface_area_Hexagon(double a, double h2);//hexagon
 
-        void show_triangle_vertexes();
+	void show_triangle_vertexes();
 	void show_triangle_facets();
 	void show_trapezoid_vertexes();
 	void show_trapezoid_facets();
