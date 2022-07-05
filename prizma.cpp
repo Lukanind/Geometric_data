@@ -28,29 +28,29 @@ double prizma::set_Sb(double new_Sb) { Sb = new_Sb; }
 
 
 
-double prizma::Volume_triangle(double a, double b, double c, double h)//triangle
+double prizma::Volume_triangle(double a, double b, double c, double h)
 {
 	double p = ((a + b + c) / 2);
 	double S = sqrt(p * (p - a) * (p - b) * (p - c));
 	return(S * h);
 }
-double prizma::Volume_trapezoid(double a, double b, double h, double h2)//trapezoid
+double prizma::Volume_trapezoid(double a, double b, double h, double h2)
 {
 	double S = (((a * b) / 2) * h);
 	return (S * h2);
 }
-double prizma::Volume_pentagon(double a, double h)//pentagon
+double prizma::Volume_pentagon(double a, double h)
 
 {
 	double S = (((a * a) / 4) * sqrt(5 * (5 + 2 * sqrt(5))));
 	return(S*h);
 }
-double prizma::Volume_hexagon(double a, double h)//Hexagon
+double prizma::Volume_hexagon(double a, double h)
 {
 	return((3 *sqrt(3)*a*a*h)/2);
 }
 
-double prizma::Surface_area(double a, double b, double c, double h)//triangle
+double prizma::Surface_area(double a, double b, double c, double h)
 {
 	double p = ((a + b + c) / 2);
 	double Sb = ((a + b + c) * h);
@@ -58,7 +58,7 @@ double prizma::Surface_area(double a, double b, double c, double h)//triangle
 	return(2 * So + Sb);
 }
 
-double prizma::Surface_area(double a, double b, double c, double d, double h, double  h2)//trapezoid
+double prizma::Surface_area(double a, double b, double c, double d, double h, double  h2)
 {
 	double Sb = ((a + b + c + d) * h2);
 	double So = (((a * b) / 2) * h);
@@ -66,7 +66,7 @@ double prizma::Surface_area(double a, double b, double c, double d, double h, do
 }
 
 
-double prizma::Surface_area(double a ,double h)//pentagon
+double prizma::Surface_area(double a ,double h)
 {
 	double Sb = ((a*5) * h);
 	double So =(((a * a) / 4) * sqrt(5 * (5 + 2 * sqrt(5))));;
@@ -74,7 +74,7 @@ double prizma::Surface_area(double a ,double h)//pentagon
 }
 
 
-double prizma::Surface_area_Hexagon(double a, double h2)//hexagon
+double prizma::Surface_area_Hexagon(double a, double h2)
 {
 	double Sb = ((a * 6) * h2);
 	double So = ((3 * sqrt(3) * a * a ) / 2);
