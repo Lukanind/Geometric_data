@@ -27,7 +27,7 @@ double parallelepiped::set_A1AB(double new_A1AB) { A1AB = new_A1AB; return(0); }
 double parallelepiped::set_A1AD(double new_A1AD) { A1AD = new_A1AD; return(0); };
 
 double parallelepiped::Surface_grani(double a, double b, double corner) {
-	return (b * (a * sin(corner * PI / 180)));
+	return (b * a * sin(corner * PI / 180));
 }
 double parallelepiped::Volume(double a, double b, double h)
 {
@@ -46,4 +46,14 @@ double parallelepiped::Surface_area(double a, double b, double c, double DAB, do
 	s2 = Surface_grani(a, c, A1AB);
 	s3 = Surface_grani(b, c, A1AD);
 	return(2 * (s1+s2+s3));
+}
+
+string parallelepiped::Grani(string grani)
+{
+	return(grani);
+}
+
+string parallelepiped::Vershin(string versh)
+{
+	return(versh);
 }
