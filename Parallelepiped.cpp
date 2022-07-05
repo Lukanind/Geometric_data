@@ -34,7 +34,7 @@ double parallelepiped::Volume(double a, double b, double h)
 	return( a*b*h );
 }
 double parallelepiped::Volume(double a, double b, double h, double corner) {
-	return(h * Surface_grani(a, b, DAB));
+	return(h * Surface_grani(a, b, corner));
 }
 
 double parallelepiped::Surface_area(double a, double b, double c) {
