@@ -17,6 +17,7 @@ public:
 
 	piramida();
 	piramida(double a, double b, double h, double d, double c, int shet);
+	piramida(double a, double b, double c, double h, int shet);
 	piramida(const piramida& piramida);
 
 
@@ -37,8 +38,10 @@ public:
 
 
 	double Volume(double a, double b, double h, int shet, double c);
+	double Volume56(double a, double b, double c, double h, int shet);
 
 	double All_Area(double a, double b, double d, int shet, double c);
+	double All_Area56(double a, double b, double c, double h, int shet);
 
 	string ALL_grani(string vershini[2][4], int shet);
 
