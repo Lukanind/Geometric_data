@@ -1,6 +1,7 @@
 #include <iostream>
 #include "piramida.h"
 #include "cmath"
+#define PI 3.14159265
 
 using namespace std;
 
@@ -36,18 +37,13 @@ double piramida::Volume(double a, double b, double h, int shet, double c)
 	}
 }
 
-double piramida::Volume56(double a, double b, double c, double h, int shet)
+double piramida::Volume56(double a, double h, int shet)
 {
-	double S5 = ((a * b) / 2) * 5;
-	double V5 = (S5 * h)/3;
-	double S6 = ((a * b) / 2) * 6;
-	double V6 = (S6 * h)/3;
-	switch (shet)
-	{
-	case 5: return(V5); break;
-	case 6: return(V6); break;
-	default: return(0);
-	}
+	double b = a / (2 * tan((180 / shet) * PI / 180));
+	this->set_b(b);
+	double S = (shet*a * b) / 2;
+	double V = (S * h)/3;
+	return (V);
 }
 
 double piramida::All_Area(double a, double b, double d, int shet, double c)
@@ -62,53 +58,61 @@ double piramida::All_Area(double a, double b, double d, int shet, double c)
 	}
 }
 
-double piramida::All_Area56(double a, double b, double c, double h, int shet)
+double piramida::All_Area56(double a, double c, double h, int shet)
 {
-	double S5 = ((a * b) / 2) * 5;
+	double b = a / (2 * tan((180 / shet) * PI / 180));
+	this->set_b(b);
+	double S = (shet*a * b) / 2;
 
-	double S6 = ((a * b) / 2) * 6;
-
-	double SS5 = S5 + ((a * c / 2) * 5);
-
-	double SS6 = S6 + ((a * c / 2) * 6);
-		switch (shet)
-		{
-		case 5: return(SS5); break;
-		case 6: return(SS6); break;
-		default: return(0);
-		}
+	double S_poln = S + ((a * c / 2) * shet);
+	
+	return (S_poln);
 }
 
-string piramida::ALL_grani(string vershini[2][4], int shet)
+string piramida::ALL_grani(string vershini[2][6], int shet)
 {
-	string N, F, G, H, M;
+	string N, F, G, H, M, D, DD, S, S2;
 	N = vershini[1][0] + vershini[0][0] + vershini[1][1];
 	F = vershini[1][1] + vershini[0][0] + vershini[1][2];
 	G = vershini[1][2] + vershini[0][0] + vershini[1][3];
 	H = vershini[1][3] + vershini[0][0] + vershini[1][0];
+	D = vershini[1][3] + vershini[0][0] + vershini[1][4];
+	DD = vershini[1][4] + vershini[0][0] + vershini[1][0];
+	S = vershini[1][4] + vershini[0][0] + vershini[1][5];
+	S2 = vershini[1][5] + vershini[0][0] + vershini[1][0];
 	M = N + "," + F + "," + G + "," + H;
 	// для четырех углов
 	string M2, FF1;
 	FF1 = vershini[1][2] + vershini[0][0] + vershini[1][0];
 	M2 = N + "," + F + "," + FF1;
+	string M3;
+	M3 = N + "," + F + "," + G + "," + D + "," + DD;
+	string M4;
+	M4 = N + "," + F + "," + G + "," + D + "," + S + "," + S2;
 	// для 3-х
 	switch (shet)
 	{
 	case 3: return (M2); break;
-	case 4:return(M); break;
+	case 4: return(M); break;
+	case 5: return(M3); break;
+	case 6: return(M4); break;
 	default: return(0);
 	}
 }
 
-string piramida::ALL_vershini(string vershini[2][4], int shet)
+string piramida::ALL_vershini(string vershini[2][6], int shet)
 {
-	string al, al1;
+	string al, al1, all5, all6;
 	al = vershini[0][0] + "," + vershini[1][0] + "," + vershini[1][1] + "," + vershini[1][2] + "," + vershini[1][3];
 	al1 = vershini[0][0] + "," + vershini[1][0] + "," + vershini[1][1] + "," + vershini[1][2];
+	all5 = vershini[0][0] + "," + vershini[1][0] + "," + vershini[1][1] + "," + vershini[1][2] + "," + vershini[1][3] + "," + vershini[1][4];
+	all6 = vershini[0][0] + "," + vershini[1][0] + "," + vershini[1][1] + "," + vershini[1][2] + "," + vershini[1][3] + "," + vershini[1][4] + "," + vershini[1][5];
 	switch (shet)
 	{
 	case 3: return (al1); break;
 	case 4: return (al); break;
+	case 5: return (all5); break;
+	case 6: return (all6); break;
 	default: return(0);
 	}
 
