@@ -10,9 +10,9 @@ class piramida
 public:
 	int shet;
 	double a, b, c, h, d;
-	string vershini[2][4]{
+	string vershini[2][6]{
 		{"S"},
-		{"A","B","C","D"}
+		{"A","B","C","D","E","F"}
 	};
 
 	piramida();
@@ -38,13 +38,13 @@ public:
 
 
 	double Volume(double a, double b, double h, int shet, double c);
-	double Volume56(double a, double b, double c, double h, int shet);
+	double Volume56(double a, double h, int shet);
 
 	double All_Area(double a, double b, double d, int shet, double c);
-	double All_Area56(double a, double b, double c, double h, int shet);
+	double All_Area56(double a, double c, double h, int shet);
 
-	string ALL_grani(string vershini[2][4], int shet);
+	string ALL_grani(string vershini[2][6], int shet);
 
-	string ALL_vershini(string vershini[2][4], int shet);
+	string ALL_vershini(string vershini[2][6], int shet);
 
 };
