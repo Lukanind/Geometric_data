@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include "piramida.h"
 #include "cmath"
 
@@ -7,6 +7,7 @@ using namespace std;
 piramida::piramida() : a(0), b(0), h(0), d(0), shet(0) {}
 piramida::piramida(const piramida& piramida) : a(piramida.a), b(piramida.b), h(piramida.h), c(piramida.c), shet(piramida.shet), d(piramida.d) {}
 piramida::piramida(double a, double b, double h, double d, double c, int shet) : a(a), b(b), h(h), d(d), c(c) {}
+piramida::piramida(double a, double b, double c, double h, int shet) : a(a), b(b), c(c), h(h) {}
 
 
 double piramida::get_a()const { return a; }
@@ -35,6 +36,20 @@ double piramida::Volume(double a, double b, double h, int shet, double c)
 	}
 }
 
+double piramida::Volume56(double a, double b, double c, double h, int shet)
+{
+	double S5 = ((a * b) / 2) * 5;
+	double V5 = (S5 * h)/3;
+	double S6 = ((a * b) / 2) * 6;
+	double V6 = (S6 * h)/3;
+	switch (shet)
+	{
+	case 5: return(V5); break;
+	case 6: return(V6); break;
+	default: return(0);
+	}
+}
+
 double piramida::All_Area(double a, double b, double d, int shet, double c)
 {
 	double p = (a + b + c) / 2;
@@ -45,6 +60,23 @@ double piramida::All_Area(double a, double b, double d, int shet, double c)
 	case 4:  return(a * b + d * a + d * b);; break;
 	default: return(0);
 	}
+}
+
+double piramida::All_Area56(double a, double b, double c, double h, int shet)
+{
+	double S5 = ((a * b) / 2) * 5;
+
+	double S6 = ((a * b) / 2) * 6;
+
+	double SS5 = S5 + ((a * c / 2) * 5);
+
+	double SS6 = S6 + ((a * c / 2) * 6);
+		switch (shet)
+		{
+		case 5: return(SS5); break;
+		case 6: return(SS6); break;
+		default: return(0);
+		}
 }
 
 string piramida::ALL_grani(string vershini[2][4], int shet)
