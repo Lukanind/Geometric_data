@@ -137,7 +137,7 @@ void Piramida(vector<piramida> L)
         cout << endl; }
         break;
     case 3: {
-        int m = 132;
+        int m = 128;
         double a, c, h;
         int shet = 5;
 
@@ -152,7 +152,7 @@ void Piramida(vector<piramida> L)
         L.push_back(piramida(a, 0, c, h, shet));
         cout << "                                              Пирамида      " << endl;
         hline(m);
-        cout << "|Длина ст. осн-я|Длина апофемы основания|Апофема|Высота|     Обьем     |    Площадь    |     Вершины     |          Грани          |" << endl;
+        cout << "|Длина ст. осн-я|Длина апофемы основания|Апофема|Высота|     Обьем     |    Площадь    |     Вершины     |        Грани        |" << endl;
         hline(m);
         for (int i = 0; i < L.size(); i++)
         {
@@ -364,7 +364,7 @@ void Prizma(vector<prizma> L)
         break;
     case 2: {
         double a, b, c, d, h, h2;
-        int m = 120;
+        int m = 146;
         cout << "ПРИМЕЧАНИЕ: вершины данноой призмы по умолчанию именуются буквами: A, B, C, D, A1, B1, C1, D1." << endl << endl;
         cout << "Введите длину первой стороны основания." << endl;
         cin >> a;
@@ -381,7 +381,7 @@ void Prizma(vector<prizma> L)
         L.push_back(prizma(a, b, c, d, h, h2, 0, 0, 0));
         cout << "                                         Призма      " << endl;
         hline(m);
-        cout << "|Длина 1 ст.|Длина 2 ст.|Длина 3 ст.|Длина 4 ст.| Высоты |  Обьем  | Площадь |      Вершины      |                     Грани                    |" << endl;
+        cout << "|Длина 1 ст.|Длина 2 ст.|Длина 3 ст.|Длина 4 ст.| Высоты |  Обьем  | Площадь |      Вершины      |                     Грани                     |" << endl;
         hline(m);
         for (int i = 0; i < L.size(); i++)
         {
@@ -393,7 +393,7 @@ void Prizma(vector<prizma> L)
             cout << "|" << setw(9) << L[i].Volume_trapezoid(a, b, h, h2);
             cout << "|" << setw(9) << L[i].Surface_area(a, b, c, d, h, h2);
             cout << "|" << setw(16) << L[i].versh_4;
-            cout << "|" << setw(47) << L[i].grani_4 << endl;
+            cout << "|" << setw(47) << L[i].grani_4 << "|" << endl;
         }
         hline(m); }
         break;
